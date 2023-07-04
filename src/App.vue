@@ -1,6 +1,17 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import { ref, watch } from 'vue';
+
+const count = ref(0)
+
+watch(
+  count, 
+  (newVal, oldVal) => {
+    
+  }
+)
+
 </script>
 
 <template>

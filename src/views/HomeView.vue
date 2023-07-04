@@ -1,8 +1,11 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 import TheWelcome from '../components/TheWelcome.vue'
+import Test from '@/components/Test.vue'
 import message from "@/utils/message";
 import debounce from "@/utils/debounce";
+
+const show = ref(true)
 
 let count = 0;
 
@@ -26,5 +29,6 @@ onMounted(()=> {
 <template>
   <main>
     <!-- <TheWelcome /> -->
+    <Test v-model="show"/>
   </main>
 </template>
